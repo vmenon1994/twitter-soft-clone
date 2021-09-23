@@ -1,12 +1,16 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, Suspense} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import TweetsContainer from '../containers/Tweets'
-import CreateTweetContainer from '../containers/CreateTweet'
-import ReplyTweetContainer from '../containers/ReplyTweet'
+// import TweetsContainer from '../containers/Tweets'
+// import CreateTweetContainer from '../containers/CreateTweet'
+// import ReplyTweetContainer from '../containers/ReplyTweet'
 import handleInitialData from '../actions/shared'
 import { Switch, Route } from 'react-router-dom'
 import Nav from './Nav'
 
+
+const TweetsContainer = React.lazy(() => import('../containers/Tweets'));
+const CreateTweetContainer = React.lazy(() => import('../containers/CreateTweet'));
+const ReplyTweetContainer = React.lazy(() => import('../containers/ReplyTweet'));
 
 
 export default function App () {
@@ -24,6 +28,7 @@ export default function App () {
       <Nav />
         { 
           loading && (
+        <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route exact path="/">
               <TweetsContainer />
@@ -37,7 +42,9 @@ export default function App () {
             <Route path="*">
               <h1>Error 404</h1>
             </Route>
-         </Switch>)
+         </Switch>
+        </Suspense> 
+         )
         } 
     </div>
   )
