@@ -2,10 +2,10 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import Tweets from '../components/Tweets'
 import CreateTweet from './CreateTweet'
-import { getTweetKeys, getSortedTweetDetails } from '../utils/helpers'
+import { getSortedTweetDetails } from '../utils/helpers'
 import { useSelector } from 'react-redux'
 import useTweets from '../hooks/useTweets'
-import LoadingBar from 'react-redux-loading'
+
 
 
 export default function ReplyTweetContainer() {

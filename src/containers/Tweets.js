@@ -1,11 +1,9 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { handletoggleLike } from '../actions/tweets'
+import { useSelector } from 'react-redux';
 import { getTweetKeys, getSortedTweetDetails } from '../utils/helpers'
-import { useHistory, useParams } from 'react-router-dom'
 import Tweets from '../components/Tweets';
 import useTweets from '../hooks/useTweets'
-import LoadingBar from 'react-redux-loading'
+
 
 
     

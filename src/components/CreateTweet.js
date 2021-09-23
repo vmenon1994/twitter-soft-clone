@@ -1,7 +1,5 @@
-import React, {useState} from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom'
-import handleAddTweet from '../actions/tweets'
+import React from 'react'
+
 
 export default function CreateTweet({ handleSubmit,  handleChange, classname, text}) {
     

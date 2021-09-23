@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import handleAddTweet from '../actions/tweets'
 import CreateTweet from '../components/CreateTweet'
-import LoadingBar from 'react-redux-loading'
+
 
 export default function CreateTweetContainer({ replyingTo, classname }) {
     
