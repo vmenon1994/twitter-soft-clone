@@ -7,7 +7,8 @@ export default function useTweets(authedUser){
     const dispatch = useDispatch()
     let history = useHistory()
 
-    const toggleLike = (id, likes) => {
+    const toggleLike = (id, likes, event) => {
+        event.stopPropagation()
         const hasLiked = isHasLiked(likes)
         const info = {
             id,
@@ -24,7 +25,8 @@ export default function useTweets(authedUser){
                     : false
     }
 
-    const goToReplyTweet = (id) => {
+    const goToReplyTweet = (id, event) => {
+        event.preventDefault()
         history.push(`/tweet/${id}`)
     }
 
