@@ -16,7 +16,10 @@ export default function Tweets({tweetDetails, goToReplyTweet, toggleLike, isHasL
                      className='tweet-container'
                     >
                     {tweetDetails.map((tweet) => (
-                     <li key={tweet.tweetId} className='tweet-contents'>
+                     <li key={tweet.tweetId} 
+                         className='tweet-contents'
+                         onClick={() => goToReplyTweet(tweet.tweetId)}
+                         >
                          <picture className='user-avatar-container'> 
                              <img 
                              src={tweet.avatarURL }

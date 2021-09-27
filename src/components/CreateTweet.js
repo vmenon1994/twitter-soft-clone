@@ -7,9 +7,9 @@ export default function CreateTweet({ handleSubmit,  handleChange, classname, te
         <div className={classname}>
             <form onSubmit={handleSubmit}>
                 <textarea 
-                 placeholder="What's Happening"
-                 value={text}
-                 onChange={handleChange}
+                  placeholder="What's Happening"
+                  value={text}
+                  onChange={handleChange}
                  />
                 <button type='submit'>Submit</button>
             </form>

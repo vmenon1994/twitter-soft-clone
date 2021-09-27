@@ -3,45 +3,7 @@ export default function getDateAndTime(epochtime) {
     return `${date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })} | ${date.toLocaleDateString()}`
 }
 
-// export function tweetDetail(tweets, users) {
-//                 console.log('aaaa',tweets, users)
-//                 const tweetDetails = Object.keys(tweets)
-//                     .map((id) => {
-//                         const { text, timestamp, likes, replies, author, id: tweetId, replyingTo} = tweets[id]
-//                         const { name, avatarURL } = users[author]
-//                         if (replyingTo) {
-//                             const { author: mainTweetAuthor } = tweets[replyingTo]
-//                             return {
-//                                 tweetId,
-//                                 text,
-//                                 timestamp,
-//                                 likes,
-//                                 likesCount: likes.length,
-//                                 repliesCount: replies.length,
-//                                 author,
-//                                 name,
-//                                 avatarURL,
-//                                 mainTweetAuthor,
-//                             }
-//                         }
-//                         else if (!replyingTo) {
-//                             return {
-//                                 tweetId,
-//                                 text,
-//                                 timestamp,
-//                                 likes,
-//                                 likesCount: likes.length,
-//                                 repliesCount: replies.length,
-//                                 author,
-//                                 name,
-//                                 avatarURL,
-//                             }
-//                         }
-                            
-//                         })  
-//                     .sort((a,b) => b.timestamp - a.timestamp)
-//                     return tweetDetails
-//             }
+
 
 export function getTweetKeys(tweets){
     console.log('bobo',tweets)

@@ -187,3 +187,7 @@ textarea {
   padding: 0 190px;
   max-width: 1000px;
 }
+
+.tweet-contents:hover {
+  cursor: pointer;
+}
