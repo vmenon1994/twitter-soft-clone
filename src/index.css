@@ -184,8 +184,9 @@ textarea {
 }
 
 .tweet-replies {
-  padding: 0 190px;
-  max-width: 1000px;
+  display: flex;
+  max-width: 900px;
+  padding-left: 125px;
 }
 
 .tweet-contents:hover {
