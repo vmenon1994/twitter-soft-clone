@@ -18,10 +18,10 @@ export default function Tweets({tweetDetails, goToReplyTweet, toggleLike, isHasL
                     {tweetDetails.map((tweet) => (
                      <li key={tweet.tweetId} 
                          className='tweet-contents'
-                         onClick={(event) => goToReplyTweet(tweet.tweetId,event)}
+                         onClick={(e) => goToReplyTweet(tweet.tweetId,e)}
                          >
                         <div 
-                          onClick={(event) => goToReplyTweet(tweet.tweetId, event)}
+                          onClick={(e) => goToReplyTweet(tweet.tweetId, e)}
                          >
                             <picture className='user-avatar-container'> 
                                 <img 
@@ -44,19 +44,19 @@ export default function Tweets({tweetDetails, goToReplyTweet, toggleLike, isHasL
                                 <div className='tweet-actions'>
                                     <RiReplyLine 
                                     className='tweet-reply'
-                                    onClick={(event) => goToReplyTweet(tweet.tweetId,event)}
+                                    onClick={(e) => goToReplyTweet(tweet.tweetId,e)}
                                     />
                                     <p className='count'>{tweet.repliesCount}</p>
                                     {isHasLiked(tweet.likes)
                                         ? <AiFillHeart 
                                             style={{color:'#ec2fc2',
                                                     fontSize:'25px'
-                                                    }}
-                                            onClick={(event) => toggleLike(tweet.tweetId, tweet.likes, event)}
+                                                    }}  
+                                            onClick={(e) => toggleLike(tweet.tweetId, tweet.likes, e)}
                                             /> 
                                         : <AiOutlineHeart 
                                             className='tweet-like' 
-                                            onClick={(event) => toggleLike(tweet.tweetId, tweet.likes, event)}
+                                            onClick={(e) => toggleLike(tweet.tweetId, tweet.likes, e)}
                                         />
                                         
                                     }   

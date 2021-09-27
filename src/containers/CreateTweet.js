@@ -13,6 +13,7 @@ export default function CreateTweetContainer({ replyingTo, classname }) {
     let history = useHistory();
 
     const handleChange = (e) => {
+        e.preventDefault()
         setText(e.target.value)
     }
 
